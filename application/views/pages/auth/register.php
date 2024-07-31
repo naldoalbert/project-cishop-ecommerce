@@ -24,7 +24,7 @@
                 <!-- Input Password -->
                 <div class="form-group mb-3">
                   <label for="">Password</label>
-                  <?= form_password('password', '', ['class' => 'form-control mt-2', 'placeholder' => 'Masukkan karakter minimal 8 karakter', 'required' => true]) ?>
+                  <?= form_password('password', '', ['class' => 'form-control mt-2', 'placeholder' => 'Masukkan password minimal 8 karakter', 'required' => true]) ?>
                   <?= form_error('password') ?>
                 </div>
                 <!-- Konfirmasi Password -->
