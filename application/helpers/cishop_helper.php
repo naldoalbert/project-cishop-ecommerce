@@ -44,7 +44,7 @@
     function hashEncryptVerify($input, $hash)
     {
         // password_hash() diganti password_verify()
-        if (password_hash($input, $hash)) {
+        if (password_verify($input, $hash)) {
             return true;
         }else{
             return false;

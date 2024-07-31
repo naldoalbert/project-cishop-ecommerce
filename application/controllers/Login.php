@@ -32,14 +32,13 @@ class Login extends MY_Controller {
             $this->view($data);
             return;
         }
-
         if ($this->login->run($input)) {
-            $this->session->flashdata('success', 'Berhasil melakukan login !');
-            redirect(base_url());
-        }else {
-            $this->session->flashdata('error', 'E-mail atau password salah atau akun anda sedang tidak aktif!');
-            redirect(base_url('login'));
-        }
+			$this->session->set_flashdata('success', 'Berhasil melakukan login!');
+			redirect(base_url());
+		} else {
+			$this->session->set_flashdata('error', 'E-Mail atau Password salah atau akun Anda sedang tidak aktif!');
+			redirect(base_url('login'));
+		}
     }
     
 

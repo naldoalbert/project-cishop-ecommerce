@@ -67,7 +67,7 @@ class Register_model extends MY_Model
             'is_login' => true,
         ];
 
-        $this->session->set_userdata( $$sess_data );
+        $this->session->set_userdata( $sess_data );
         
         return true;
     }
