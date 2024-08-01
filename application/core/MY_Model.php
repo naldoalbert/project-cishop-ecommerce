@@ -121,6 +121,7 @@ class MY_Model extends CI_Model
           $this->perPage,
           $this->calculateRealOffset($page)
         );
+        return $this;
     }
 
     //  Menggantikan offset dengan nilai sesuai halaman
@@ -153,10 +154,10 @@ class MY_Model extends CI_Model
             'last_link'                          =>false,
             'first_tag_open'               =>'<li class="page-item">',
             'first_tag_close'               =>'</li>',
-            'prev_link'                         =>'$laquo',
+            'prev_link'                         =>'$&laquo',
             'prev_tag_open'               =>'<li class="page-item">',
             'prev_tag_close'               =>'</li>',
-            'next_link'                         =>'$raquo',
+            'next_link'			                => '&raquo',
             'next_tag_open'               =>'<li class="page-item">',
             'next_tag_close'               =>'</li>',
             'last_tag_open'               =>'<li class="page-item">',
