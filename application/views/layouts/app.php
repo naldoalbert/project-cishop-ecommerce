@@ -30,11 +30,11 @@
 		<!-- ============================= -->
 
 		<!-- Fontawesome CSS-->
-		<link rel="stylesheet" href="Assets/Library/fontawesome/css/all.min.css" />
+		<link rel="stylesheet" href="/Assets/Library/fontawesome/css/all.min.css" />
 		<!-- ============================= -->
 
 		<!-- Style -->
-		<link rel="stylesheet" href="Assets/CSS/app.css" />
+		<link rel="stylesheet" href="/Assets/CSS/app.css" />
 		<!-- ============================= -->
 
 		<!-- Favicons -->
@@ -172,8 +172,8 @@
 		<?php $this->load->view($page); ?>
 		<!-- Content End-->
 
-		<script src="Assets/Library/jquery/jquery-3.7.1.min.js"></script>
-		<script src="Assets/Library/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="Assets/JS/app.js"></script>
+		<script src="/Assets/Library/jquery/jquery-3.7.1.min.js"></script>
+		<script src="/Assets/Library/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="/Assets/JS/app.js"></script>
 	</body>
 </html>

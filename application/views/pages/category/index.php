@@ -6,7 +6,7 @@
 			<div class="card">
 				<div class="card-header">
 					<span>Kategori</span>
-					<a href="admin-category-form.html" class="btn btn-sm btn-secondary"
+					<a href="<?= base_url('category/create') ?>" class="btn btn-sm btn-secondary"
 						>Tambah</a
 					>
 					<!-- Form cari/riset -->
@@ -44,9 +44,9 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php foreach($content as $row) : ?>
+							<?php $no = 0; foreach ($content as $row) : $no++;?>
 							<tr>
-								<td>1</td>
+								<td><?= $no ?></td>
 								<td><?= $row->title ?></td>
 								<td><?= $row->slug ?></td>
 								<td>
