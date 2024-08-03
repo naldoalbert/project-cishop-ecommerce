@@ -24,7 +24,7 @@
 
 		<!-- Bootstrap -->
 		<link
-			href="Assets/Library/bootstrap/css/bootstrap.min.css"
+			href="/Assets/Library/bootstrap/css/bootstrap.min.css"
 			rel="stylesheet"
 		/>
 		<!-- ============================= -->
@@ -168,9 +168,9 @@
 		<!-- Navigasi End -->
 		<!-- ============================= -->
 
-        <!-- Content Start-->
-         <?php $this->load->view($page); ?>
-        <!-- Content End-->
+		<!-- Content Start-->
+		<?php $this->load->view($page); ?>
+		<!-- Content End-->
 
 		<script src="Assets/Library/jquery/jquery-3.7.1.min.js"></script>
 		<script src="Assets/Library/bootstrap/js/bootstrap.bundle.min.js"></script>
