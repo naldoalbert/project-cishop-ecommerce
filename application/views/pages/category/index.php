@@ -51,10 +51,11 @@
 								<td><?= $row->slug ?></td>
 								<td>
 									<form action="">
-										<a href="#">
+										<a href="<?= base_url('category/edit/$row->id') ?>">
 											<button class="btn btn-sm">
 												<i class="fas fa-edit text-info"></i>
 											</button>
+										</a>
 											<button
 												class="btn btn-sm"
 												type="submit"
@@ -62,7 +63,6 @@
 											>
 												<i class="fas fa-trash text-danger"></i>
 											</button>
-										</a>
 									</form>
 								</td>
 							</tr>
