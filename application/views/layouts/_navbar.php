@@ -18,7 +18,7 @@
 					<!-- Menu bagian kiri -->
 					<ul class="navbar-nav me-auto mb-2 mb-md-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="index.html"
+							<a class="nav-link active" aria-current="page" href="<?= base_url('home/index') ?>"
 								>Home</a
 							>
 						</li>
@@ -34,7 +34,7 @@
 								>Manage</a
 							>
 							<div class="dropdown-menu" aria-labelledby="dropdown-1">
-								<a href="admin-category.html" class="dropdown-item">Kategori</a>
+								<a href="<?= base_url('category') ?>" class="dropdown-item">Kategori</a>
 								<a href="admin-product.html" class="dropdown-item">Produk</a>
 								<a href="admin-order.html" class="dropdown-item">Order</a>
 								<a href="admin-user.html" class="dropdown-item">Pengguna</a>

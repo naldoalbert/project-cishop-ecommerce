@@ -16,7 +16,7 @@
     }
 
     if ($warning) {
-        $alert_status = 'alert-warnng';
+        $alert_status = 'alert-warning';
         $status = 'Warning!';
         $message = $warning;
     }
