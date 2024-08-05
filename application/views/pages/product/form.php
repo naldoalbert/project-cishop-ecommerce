@@ -70,6 +70,10 @@
                                           <?php if($this->session->flashdata('image_error')) : ?>
                                                 <small class="form-text text-danger"><?= $this->session->flashdata('image_error') ?></small>
                                           <?php endif ?>
+                                          
+                                          <?php if($input->image) : ?>
+                                                <img src="<?= base_url("/images/product/$input->image") ?>" alt="" height="150">
+                                          <?php endif ?>
 						</div>
 						<!-- Input Slug-->
 						<div class="form-group mb-2">

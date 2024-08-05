@@ -11,13 +11,14 @@
 					>
 					<!-- Form cari/riset -->
 					<div class="float-end">
-						<form action="">
+						<form action="<?= base_url('product/search') ?>" method="post">
 							<div class="input-group">
 								<!-- form cari -->
 								<input
 									type="text"
 									class="form-control form-control-sm text-center"
 									placeholder="Cari"
+									value="<?= $this->session->userdata('keyword') ?>"
 								/>
 								<div class="input-group-append">
 									<!-- tombol cari -->
@@ -25,7 +26,7 @@
 										<i class="fas fa-search"></i>
 									</button>
 									<!-- tombol hapus -->
-									<a href="#" class="btn btn-sm btn-info">
+									<a href="<?= base_url('product/reset') ?>" class="btn btn-sm btn-info">
 										<i class="fas fa-eraser"></i>
 									</a>
 								</div>
@@ -70,22 +71,21 @@
 								<td><?= $row->is_available ? 'Tersedia' : 'Kosong' ?></td>
 								<!-- kolom tombol edit dan hapus -->
 								<td>
-									<form action="">
-										<a href="#">
-											<!-- edit -->
-											<button class="btn btn-sm">
-												<i class="fas fa-edit text-info"></i>
-											</button>
-											<!-- delete -->
-											<button
-												class="btn btn-sm"
-												type="submit"
-												onclick="return confirm('Are you sure?')"
-											>
-												<i class="fas fa-trash text-danger"></i>
-											</button>
-										</a>
-									</form>
+									<?= form_open(base_url("product/delete/$row->id"), ['method' => 'POST']) ?>
+									<?= form_hidden('id', $row->id) ?>
+									<a href="<?= base_url("/product/edit/$row->id") ?>" class="btn btn-sm">
+										<!-- edit -->
+										<i class="fas fa-edit text-info mx-2"></i>
+										<!-- delete -->
+										<button
+											class="btn btn-sm"
+											type="submit"
+											onclick="return confirm('Apakah yakin ingin menghapus?')"
+										>
+											<i class="fas fa-trash text-danger"></i>
+										</button>
+										<?= form_close() ?>
+									</a>
 								</td>
 							</tr>
                                           <?php endforeach ?>

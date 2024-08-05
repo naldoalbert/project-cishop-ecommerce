@@ -73,11 +73,18 @@ class Product_model extends MY_Model
 
 		$this->load->library('upload', $config);
 
-		if ($this->upload->do_upload($fileName)) {
+		if ($this->upload->do_upload($fieldName)) {
 			return $this->upload->data();
 		}else {
 			$this->session->set_flashdata('image_error', $this->upload->display_errors('', ''));
 			return false;
+		}
+	}
+
+	public function deleteImage($fileName)
+	{
+		if (file_exists("./images/product/$fileName")) {
+			unlink("./images/product/$fileName");
 		}
 	}
 
